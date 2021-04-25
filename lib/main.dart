@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'bottom_Button.dart';
+import 'icons.dart';
+import 'resuable_cards.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,45 +22,50 @@ void main() {
                 child: Row(
                   children: [
                     Expanded(
-                      child: Resuable_Cards(Color(0xFF1D1F33),),
+                      child: resuable_cards(
+                        Colour: Color(0xFF1D1F33),
+                        widget: icons_settting_widget(
+                            fontAwesomeIconsSetter: FontAwesomeIcons.male,
+                            label: "Female"),
+                      ),
                     ),
                     Expanded(
-                      child: Resuable_Cards(Color(0xFF1D1F33),),
+                      child: resuable_cards(
+                        Colour: Color(0xFF1D1F33),
+                        widget: icons_settting_widget(
+                            fontAwesomeIconsSetter: FontAwesomeIcons.female,
+                            label: "Female"),
+                      ),
                     )
                   ],
                 ),
               ),
               Expanded(
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Resuable_Cards(Color(0xFF1D1F33),),
+                  child: Row(
+                children: [
+                  Expanded(
+                    child: resuable_cards(
+                      Colour: Color(0xFF1D1F33),
                     ),
-                  ],
-                ),
-              ),
+                  )
+                ],
+              )),
               Expanded(
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Resuable_Cards(Color(0xFF1D1F33),),
+                  child: Row(
+                children: [
+                  Expanded(
+                    child: resuable_cards(
+                      Colour: Color(0xFF1D1F33),
                     ),
-                    Expanded(
-                      child: Resuable_Cards(Color(0xFF1D1F33),),
-                    )
-                  ],
-                ),
-              ),
-               TextButton(
-
-                child: Container(
-                  color: Colors.red,
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  width: double.infinity,
-                  margin: EdgeInsets.only(left: 0,bottom: 0,right: 0,top: 10),
-                  child: Center(child: Text("Done")),
-                ),
-              )
+                  ),
+                  Expanded(
+                    child: resuable_cards(
+                      Colour: Color(0xFF1D1F33),
+                    ),
+                  )
+                ],
+              )),
+              bottom_button()
             ],
           ),
         )),
