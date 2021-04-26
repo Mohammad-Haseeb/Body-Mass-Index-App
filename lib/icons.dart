@@ -9,14 +9,22 @@ class icons_settting_widget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(fontAwesomeIconsSetter,
-          size: 60,),
+        Expanded(
+          flex: 1,
+          child: Icon(fontAwesomeIconsSetter,
+            size: 40,),
+        ),
         SizedBox(
           height: 10.0,
         ),
-        Text(label,style: TextStyle(
-            fontSize: 30.0
-        ),),
+        Expanded(
+          flex: 1,
+          child: Text(
+
+            label,style: TextStyle(
+              fontSize: 20.0
+          ),),
+        ),
 
 
       ],

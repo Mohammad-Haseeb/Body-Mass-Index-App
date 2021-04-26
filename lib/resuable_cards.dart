@@ -9,10 +9,10 @@ class resuable_cards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(10),
         color: Colour,
       ),
-      margin: EdgeInsets.all(15.0),
+      margin: EdgeInsets.all(10.0),
       child: widget,
     );
   }
