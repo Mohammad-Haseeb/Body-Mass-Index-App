@@ -9,7 +9,7 @@ class bottom_button extends StatelessWidget {
     return Container(
       child: Center(
         child: Text(
-            "Done"
+            "Calculate Your BMI"
         ),
       ),
       color: Colors.red,

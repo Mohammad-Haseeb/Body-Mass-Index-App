@@ -28,7 +28,10 @@ class _Input_PageState extends State<Input_Page> {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: Color(0xFF0A0D22),
-          primaryColor: Color(0xFF0A0D22)),
+          primaryColor: Color(0xFF0A0D22),
+          accentColor: Colors.black45,
+      ),
+      
       home: Scaffold(
           appBar: AppBar(
             title: Text("BMI App"),
@@ -84,7 +87,7 @@ class _Input_PageState extends State<Input_Page> {
                             widget:Column(
                               crossAxisAlignment:CrossAxisAlignment.center,
                               children: [
-                                Text("Weight"),
+                                Text("Height"),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -124,11 +127,101 @@ class _Input_PageState extends State<Input_Page> {
                         Expanded(
                           child: resuable_cards(
                             Colour:unSelected_Colour,
+                            widget: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Column(
+                                children: [
+                                  Text("Weight" ,style: TextStyle(
+                                    fontSize: 30.0
+                                  ),),
+                                  SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Text("67",style: TextStyle(
+                                      fontSize: 30.0
+
+                                  ),),SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Theme(
+                                        data: ThemeData(
+                                          accentColor: Colors.black45
+                                        ),
+                                        child: FloatingActionButton(onPressed: (){
+                                        },
+                                          child: Icon(FontAwesomeIcons.plus),
+
+                                        ),
+                                      ),
+                                      Theme(
+                                        data: ThemeData(
+                                            accentColor: Colors.black45
+                                        ),
+                                        child: FloatingActionButton(onPressed: (){                                      print("Hello");
+                                        },
+                                          child: Icon(FontAwesomeIcons.minus),
+
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+
+
                           ),
                         ),
                         Expanded(
                           child: resuable_cards(
                             Colour: unSelected_Colour,
+                            widget: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Column(
+                                children: [
+                                  Text("Age" ,style: TextStyle(
+                                      fontSize: 30.0
+                                  ),),
+                                  SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Text("67",style: TextStyle(
+                                      fontSize: 30.0
+
+                                  ),),SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Theme(
+                                        data: ThemeData(
+                                            accentColor: Colors.black45
+                                        ),
+                                        child: FloatingActionButton(onPressed: (){
+                                        },
+                                          child: Icon(FontAwesomeIcons.plus),
+
+                                        ),
+                                      ),
+                                      Theme(
+                                        data: ThemeData(
+                                            accentColor: Colors.black45
+                                        ),
+                                        child: FloatingActionButton(onPressed: (){                                      print("Hello");
+                                        },
+                                          child: Icon(FontAwesomeIcons.minus),
+
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                         )
                       ],
