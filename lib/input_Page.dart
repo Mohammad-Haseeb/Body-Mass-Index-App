@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,7 +22,7 @@ class Input_Page extends StatefulWidget {
 class _Input_PageState extends State<Input_Page> {
   Gender selected_gender;
 
-  
+   int value=122;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,6 +81,39 @@ class _Input_PageState extends State<Input_Page> {
                         Expanded(
                           child: resuable_cards(
                             Colour: unSelected_Colour,
+                            widget:Column(
+                              crossAxisAlignment:CrossAxisAlignment.center,
+                              children: [
+                                Text("Weight"),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                                  textBaseline: TextBaseline.alphabetic,
+                                  children: [
+                                    Text(value.toString(),style: TextStyle(
+                                      fontSize: 60.0
+                                    ),),
+                                    Text("cm"),
+
+
+                                  ],
+
+                                ),
+                                Slider(value: value.toDouble(),
+                                min: 120,
+                                  max: 220,
+                                  onChanged: (double newValue){
+                                  setState(() {
+                                    value=newValue.round();
+
+                                  });
+
+                                  },
+                                ),
+                              ],
+                            ) ,
+
+
                           ),
                         )
                       ],
