@@ -128,7 +128,7 @@ class _Input_PageState extends State<Input_Page> {
                           child: resuable_cards(
                             Colour:unSelected_Colour,
                             widget: Padding(
-                              padding: const EdgeInsets.all(30.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Column(
                                 children: [
                                   Text("Weight" ,style: TextStyle(
@@ -138,7 +138,7 @@ class _Input_PageState extends State<Input_Page> {
                                     height: 10.0,
                                   ),
                                   Text("67",style: TextStyle(
-                                      fontSize: 30.0
+                                      fontSize: 25.0
 
                                   ),),SizedBox(
                                     height: 10.0,
@@ -179,20 +179,20 @@ class _Input_PageState extends State<Input_Page> {
                           child: resuable_cards(
                             Colour: unSelected_Colour,
                             widget: Padding(
-                              padding: const EdgeInsets.all(30.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Column(
                                 children: [
                                   Text("Age" ,style: TextStyle(
-                                      fontSize: 30.0
+                                      fontSize: 25.0
                                   ),),
                                   SizedBox(
-                                    height: 10.0,
+                                    height: 05.0,
                                   ),
                                   Text("67",style: TextStyle(
                                       fontSize: 30.0
 
                                   ),),SizedBox(
-                                    height: 10.0,
+                                    height: 05.0,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

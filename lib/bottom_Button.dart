@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'finalScreen.dart';
 class bottom_button extends StatelessWidget {
   const bottom_button({
     Key key,
@@ -7,14 +8,22 @@ class bottom_button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Text(
-            "Calculate Your BMI"
+      child: TextButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>ResultScreen()));
+        },
+        child: Center(
+          child: Text(
+              "Calculate Your BMI",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0
+
+             ),
+          ),
         ),
       ),
       color: Colors.red,
-      margin: EdgeInsets.only(top: 10.0),
-      padding: EdgeInsets.only(bottom: 20.0,top:20.0),
       width: double.infinity,
     );
   }
